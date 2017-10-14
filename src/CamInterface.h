@@ -381,6 +381,10 @@ namespace camera
 	  throw std::runtime_error("This camerea does not support callback functions. "
 				   "Use is isFrameAvailable() instead.");
 	};
+    virtual bool setErrorCallbackFcn(void (*pcallback_function)(const void* p),void *p)
+    {
+        throw std::runtime_error("This camerea does not support error callback functions. ");
+    };
 	
 	//! synchronizes the camera time with the system time. Should be called only once
         /*!
